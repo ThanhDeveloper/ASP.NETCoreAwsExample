@@ -67,3 +67,16 @@ Deploy application
     cd "AWSServerless/src/AWSServerless"
     dotnet lambda deploy-serverless
 ```
+
+Deploy the aws lambda with cli
+```
+    cd Src/AWSServerless
+    dotnet lambda deploy-function
+    runtime: dotnet6
+    function name: AWSServerless
+    role : IAM (create role and grant permission)
+    memory size: 256
+    timeout: 30
+    handler: AWSServerless
+    Create Function URL in configuration tab => Function URL => Auth type none
+```
